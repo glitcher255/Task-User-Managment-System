@@ -21,6 +21,7 @@
 
 ```sh
 node app.js
+OR
 Run "Start_Server.bat" (Windows only)
 ```
 
