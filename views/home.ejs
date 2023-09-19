@@ -1,0 +1,77 @@
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="full-screen">
+        <div class="log-textarea-cont" style="display: none;">
+            <textarea class="log-textarea"></textarea>
+            <button class="log-textarea-clear">Clear</button>
+            <button class="log-textarea-close">Close</button>
+        </div>
+
+        <div class="add-task">
+            <button class="add-task-btn" style="width: 100px;">
+                <p>Add task</p>
+            </button>
+            <div class="search-input-cont">
+                <input class="search-input" placeholder="Search...">
+            </div>
+            <button class="restore-btn">Restore</button>
+        </div>
+
+        <div class="update-message-cont">
+            <input class="update-message-input" name="update-message-input" value="<%= update_message %>" readonly>
+            <button class="log-btn">Log</button>
+            <button class="date-sort-btn">Date Descending</button>
+        </div>
+
+        <div class="task-container">
+            <% data.forEach(element=> { %>
+                <div class="task">
+                    <form action="/edit" method="post" class="task-title-form">
+                        <input class="task-title task-colorable" value="<%= element.userTitle %>" name="task_title">
+                        <button type="submit" style="display: none;"></button>
+                        <input class="task-date task-colorable" value="<%= element.userDate %>" name="task_date"
+                            readonly>
+                        <input name="userUniqueId" style="display: none;" value="<%= element.userUniqueId %>">
+                    </form>
+                    <form action="/delete" method="post" style="height: 100%;">
+                        <input class="delete_button_input" name="delete_submit" value="">
+                        <button type="submit" class="task-delete-btn">Delete</button>
+                        <input name="userUniqueId" style="display: none;" value="<%= element.userUniqueId %>">
+                    </form>
+
+                </div>
+                <% }) %>
+        </div>
+
+        <div class="add-task-form-container">
+            <div class="add-task-form" style="display: none;">
+                <div class="add-task-form-mission-text">
+                    <p>Create new task.</p>
+                </div>
+                <div class="add-task-form-input">
+                    <form action="/" method="post">
+                        <label>Title</label>
+                        <input id="add-task-form-title" class="add-task-form-title add-task-form-inputs" value="test"
+                            type="text" name="userTitle" minlength="1" maxlength="100" required>
+                        <button type="submit" class="add-task-form-submit"> Enter </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="manager.js"></script>
+</body>
+
+</html>
