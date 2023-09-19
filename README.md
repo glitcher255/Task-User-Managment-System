@@ -21,6 +21,7 @@
 
 ```sh
 node app.js
+Run "Start_Server.bat" (Windows only)
 ```
 
 ## Author
