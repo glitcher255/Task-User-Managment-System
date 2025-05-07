@@ -1,5 +1,5 @@
-<h1 align="center">Task-User-Managment-System ❤️</h1>
-![management system](management_interface.png)
+![management system](/management_interface.png)
+<h1 align="center">Logged-Task-User-Managment-System ❤️</h1>
 <p>
   <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
   <img src="https://img.shields.io/badge/node-%3E%3D9.3.0-blue.svg" />
@@ -11,7 +11,7 @@
   </a>
 </p>
 
-> Simple User Managment Server for adding tasks and reminders for team members or as a basic task list system
+> Simple User Managment Server for adding tasks and reminders for team members or as a basic task list with system logs
 
 ## Prerequisites
 
@@ -25,12 +25,12 @@ node app.js
 OR
 Run "Start_Server.bat" (Windows only)
 ```
+Hosts local server at ```http://127.0.0.1:3000```
 
 ## Author
 
 👤 **Glitcher**
 
-* Website: https://glitcher255.github.io/Portfolio/home_p/home/home.html
 * Github: [@glitcher255](https://github.com/glitcher255)
 
 ## 🤝 Contributing
